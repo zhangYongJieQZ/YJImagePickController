@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8457BBDF1E68153A002A1843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BBDE1E68153A002A1843 /* main.m */; };
+		8457BBE21E68153A002A1843 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BBE11E68153A002A1843 /* AppDelegate.m */; };
+		8457BBE51E68153A002A1843 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BBE41E68153A002A1843 /* ViewController.m */; };
+		8457BBE81E68153A002A1843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8457BBE61E68153A002A1843 /* Main.storyboard */; };
+		8457BBEA1E68153A002A1843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8457BBE91E68153A002A1843 /* Assets.xcassets */; };
+		8457BBED1E68153A002A1843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8457BBEB1E68153A002A1843 /* LaunchScreen.storyboard */; };
+		8457BC2E1E68183D002A1843 /* UIView+YJFrameExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC191E68183D002A1843 /* UIView+YJFrameExtend.m */; };
+		8457BC2F1E68183D002A1843 /* UIViewController+YJPhotoExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC1B1E68183D002A1843 /* UIViewController+YJPhotoExtend.m */; };
+		8457BC301E68183D002A1843 /* YJImagePickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC1D1E68183D002A1843 /* YJImagePickViewController.m */; };
+		8457BC311E68183D002A1843 /* YJImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC1F1E68183D002A1843 /* YJImageScrollView.m */; };
+		8457BC321E68183D002A1843 /* YJPhotoAblumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC211E68183D002A1843 /* YJPhotoAblumTableViewCell.m */; };
+		8457BC331E68183D002A1843 /* YJPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC231E68183D002A1843 /* YJPhotoCollectionViewCell.m */; };
+		8457BC341E68183D002A1843 /* YJPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8457BC241E68183D002A1843 /* YJPhotoCollectionViewCell.xib */; };
+		8457BC351E68183D002A1843 /* YJPhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC261E68183D002A1843 /* YJPhotoCollectionViewController.m */; };
+		8457BC361E68183D002A1843 /* YJPhotoShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC281E68183D002A1843 /* YJPhotoShareManager.m */; };
+		8457BC371E68183D002A1843 /* YJPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC2A1E68183D002A1843 /* YJPreviewViewController.m */; };
+		8457BC381E68183D002A1843 /* YJPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8457BC2B1E68183D002A1843 /* YJPreviewViewController.xib */; };
+		8457BC391E68183D002A1843 /* YJReusableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */; };
+		8457BC3B1E68FEAD002A1843 /* YJImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8457BBDA1E68153A002A1843 /* YJImagePickDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJImagePickDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8457BBDE1E68153A002A1843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8457BBE01E68153A002A1843 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8457BBE11E68153A002A1843 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8457BBE31E68153A002A1843 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8457BBE41E68153A002A1843 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8457BBE71E68153A002A1843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8457BBE91E68153A002A1843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8457BBEC1E68153A002A1843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8457BBEE1E68153A002A1843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8457BC181E68183D002A1843 /* UIView+YJFrameExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YJFrameExtend.h"; sourceTree = "<group>"; };
+		8457BC191E68183D002A1843 /* UIView+YJFrameExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YJFrameExtend.m"; sourceTree = "<group>"; };
+		8457BC1A1E68183D002A1843 /* UIViewController+YJPhotoExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YJPhotoExtend.h"; sourceTree = "<group>"; };
+		8457BC1B1E68183D002A1843 /* UIViewController+YJPhotoExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YJPhotoExtend.m"; sourceTree = "<group>"; };
+		8457BC1C1E68183D002A1843 /* YJImagePickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJImagePickViewController.h; sourceTree = "<group>"; };
+		8457BC1D1E68183D002A1843 /* YJImagePickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJImagePickViewController.m; sourceTree = "<group>"; };
+		8457BC1E1E68183D002A1843 /* YJImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJImageScrollView.h; sourceTree = "<group>"; };
+		8457BC1F1E68183D002A1843 /* YJImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJImageScrollView.m; sourceTree = "<group>"; };
+		8457BC201E68183D002A1843 /* YJPhotoAblumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPhotoAblumTableViewCell.h; sourceTree = "<group>"; };
+		8457BC211E68183D002A1843 /* YJPhotoAblumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPhotoAblumTableViewCell.m; sourceTree = "<group>"; };
+		8457BC221E68183D002A1843 /* YJPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		8457BC231E68183D002A1843 /* YJPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		8457BC241E68183D002A1843 /* YJPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		8457BC251E68183D002A1843 /* YJPhotoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPhotoCollectionViewController.h; sourceTree = "<group>"; };
+		8457BC261E68183D002A1843 /* YJPhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPhotoCollectionViewController.m; sourceTree = "<group>"; };
+		8457BC271E68183D002A1843 /* YJPhotoShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPhotoShareManager.h; sourceTree = "<group>"; };
+		8457BC281E68183D002A1843 /* YJPhotoShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPhotoShareManager.m; sourceTree = "<group>"; };
+		8457BC291E68183D002A1843 /* YJPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJPreviewViewController.h; sourceTree = "<group>"; };
+		8457BC2A1E68183D002A1843 /* YJPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJPreviewViewController.m; sourceTree = "<group>"; };
+		8457BC2B1E68183D002A1843 /* YJPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJPreviewViewController.xib; sourceTree = "<group>"; };
+		8457BC2C1E68183D002A1843 /* YJReusableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJReusableScrollView.h; sourceTree = "<group>"; };
+		8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJReusableScrollView.m; sourceTree = "<group>"; };
+		8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YJImageAssets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8457BBD71E68153A002A1843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8457BBD11E68153A002A1843 = {
+			isa = PBXGroup;
+			children = (
+				8457BBDC1E68153A002A1843 /* YJImagePickDemo */,
+				8457BBDB1E68153A002A1843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8457BBDB1E68153A002A1843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8457BBDA1E68153A002A1843 /* YJImagePickDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8457BBDC1E68153A002A1843 /* YJImagePickDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8457BC171E68183D002A1843 /* YJImagePickController */,
+				8457BBE01E68153A002A1843 /* AppDelegate.h */,
+				8457BBE11E68153A002A1843 /* AppDelegate.m */,
+				8457BBE31E68153A002A1843 /* ViewController.h */,
+				8457BBE41E68153A002A1843 /* ViewController.m */,
+				8457BBE61E68153A002A1843 /* Main.storyboard */,
+				8457BBE91E68153A002A1843 /* Assets.xcassets */,
+				8457BBEB1E68153A002A1843 /* LaunchScreen.storyboard */,
+				8457BBEE1E68153A002A1843 /* Info.plist */,
+				8457BBDD1E68153A002A1843 /* Supporting Files */,
+			);
+			path = YJImagePickDemo;
+			sourceTree = "<group>";
+		};
+		8457BBDD1E68153A002A1843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8457BBDE1E68153A002A1843 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8457BC171E68183D002A1843 /* YJImagePickController */ = {
+			isa = PBXGroup;
+			children = (
+				8457BC181E68183D002A1843 /* UIView+YJFrameExtend.h */,
+				8457BC191E68183D002A1843 /* UIView+YJFrameExtend.m */,
+				8457BC1A1E68183D002A1843 /* UIViewController+YJPhotoExtend.h */,
+				8457BC1B1E68183D002A1843 /* UIViewController+YJPhotoExtend.m */,
+				8457BC1C1E68183D002A1843 /* YJImagePickViewController.h */,
+				8457BC1D1E68183D002A1843 /* YJImagePickViewController.m */,
+				8457BC1E1E68183D002A1843 /* YJImageScrollView.h */,
+				8457BC1F1E68183D002A1843 /* YJImageScrollView.m */,
+				8457BC201E68183D002A1843 /* YJPhotoAblumTableViewCell.h */,
+				8457BC211E68183D002A1843 /* YJPhotoAblumTableViewCell.m */,
+				8457BC221E68183D002A1843 /* YJPhotoCollectionViewCell.h */,
+				8457BC231E68183D002A1843 /* YJPhotoCollectionViewCell.m */,
+				8457BC241E68183D002A1843 /* YJPhotoCollectionViewCell.xib */,
+				8457BC251E68183D002A1843 /* YJPhotoCollectionViewController.h */,
+				8457BC261E68183D002A1843 /* YJPhotoCollectionViewController.m */,
+				8457BC271E68183D002A1843 /* YJPhotoShareManager.h */,
+				8457BC281E68183D002A1843 /* YJPhotoShareManager.m */,
+				8457BC291E68183D002A1843 /* YJPreviewViewController.h */,
+				8457BC2A1E68183D002A1843 /* YJPreviewViewController.m */,
+				8457BC2B1E68183D002A1843 /* YJPreviewViewController.xib */,
+				8457BC2C1E68183D002A1843 /* YJReusableScrollView.h */,
+				8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */,
+				8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */,
+			);
+			path = YJImagePickController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8457BBD91E68153A002A1843 /* YJImagePickDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8457BBF11E68153A002A1843 /* Build configuration list for PBXNativeTarget "YJImagePickDemo" */;
+			buildPhases = (
+				8457BBD61E68153A002A1843 /* Sources */,
+				8457BBD71E68153A002A1843 /* Frameworks */,
+				8457BBD81E68153A002A1843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YJImagePickDemo;
+			productName = YJImagePickDemo;
+			productReference = 8457BBDA1E68153A002A1843 /* YJImagePickDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8457BBD21E68153A002A1843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "张永杰";
+				TargetAttributes = {
+					8457BBD91E68153A002A1843 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8457BBD51E68153A002A1843 /* Build configuration list for PBXProject "YJImagePickDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8457BBD11E68153A002A1843;
+			productRefGroup = 8457BBDB1E68153A002A1843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8457BBD91E68153A002A1843 /* YJImagePickDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8457BBD81E68153A002A1843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8457BBED1E68153A002A1843 /* LaunchScreen.storyboard in Resources */,
+				8457BC381E68183D002A1843 /* YJPreviewViewController.xib in Resources */,
+				8457BBEA1E68153A002A1843 /* Assets.xcassets in Resources */,
+				8457BC3B1E68FEAD002A1843 /* YJImageAssets.xcassets in Resources */,
+				8457BC341E68183D002A1843 /* YJPhotoCollectionViewCell.xib in Resources */,
+				8457BBE81E68153A002A1843 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8457BBD61E68153A002A1843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8457BC351E68183D002A1843 /* YJPhotoCollectionViewController.m in Sources */,
+				8457BC361E68183D002A1843 /* YJPhotoShareManager.m in Sources */,
+				8457BBE51E68153A002A1843 /* ViewController.m in Sources */,
+				8457BC331E68183D002A1843 /* YJPhotoCollectionViewCell.m in Sources */,
+				8457BBE21E68153A002A1843 /* AppDelegate.m in Sources */,
+				8457BBDF1E68153A002A1843 /* main.m in Sources */,
+				8457BC2F1E68183D002A1843 /* UIViewController+YJPhotoExtend.m in Sources */,
+				8457BC301E68183D002A1843 /* YJImagePickViewController.m in Sources */,
+				8457BC371E68183D002A1843 /* YJPreviewViewController.m in Sources */,
+				8457BC2E1E68183D002A1843 /* UIView+YJFrameExtend.m in Sources */,
+				8457BC391E68183D002A1843 /* YJReusableScrollView.m in Sources */,
+				8457BC311E68183D002A1843 /* YJImageScrollView.m in Sources */,
+				8457BC321E68183D002A1843 /* YJPhotoAblumTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8457BBE61E68153A002A1843 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8457BBE71E68153A002A1843 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8457BBEB1E68153A002A1843 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8457BBEC1E68153A002A1843 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8457BBEF1E68153A002A1843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8457BBF01E68153A002A1843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8457BBF21E68153A002A1843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuyueyes.YJImagePickDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8457BBF31E68153A002A1843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuyueyes.YJImagePickDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8457BBD51E68153A002A1843 /* Build configuration list for PBXProject "YJImagePickDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8457BBEF1E68153A002A1843 /* Debug */,
+				8457BBF01E68153A002A1843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8457BBF11E68153A002A1843 /* Build configuration list for PBXNativeTarget "YJImagePickDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8457BBF21E68153A002A1843 /* Debug */,
+				8457BBF31E68153A002A1843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8457BBD21E68153A002A1843 /* Project object */;
+}

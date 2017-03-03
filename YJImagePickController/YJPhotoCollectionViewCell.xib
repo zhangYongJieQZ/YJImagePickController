@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="YJPhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYw-hH-heM">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-aX-NRP">
+                        <rect key="frame" x="77" y="0.0" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="ECF-oU-dbI"/>
+                            <constraint firstAttribute="width" constant="23" id="ZPr-Ep-kek"/>
+                        </constraints>
+                        <state key="normal" image="yj_noSelected"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xYw-hH-heM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gm3-WO-8xs"/>
+                <constraint firstItem="XoV-aX-NRP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pbu-Sa-u0C"/>
+                <constraint firstAttribute="trailing" secondItem="XoV-aX-NRP" secondAttribute="trailing" id="c7R-zQ-83c"/>
+                <constraint firstAttribute="trailing" secondItem="xYw-hH-heM" secondAttribute="trailing" id="etR-Tg-fD3"/>
+                <constraint firstItem="xYw-hH-heM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lHX-wo-1b1"/>
+                <constraint firstAttribute="bottom" secondItem="xYw-hH-heM" secondAttribute="bottom" id="yB9-SH-kVV"/>
+            </constraints>
+            <connections>
+                <outlet property="backImageV" destination="xYw-hH-heM" id="ECD-XD-Boh"/>
+                <outlet property="selectedBtn" destination="XoV-aX-NRP" id="OuO-Nj-eqK"/>
+                <outletCollection property="selectedBtn" destination="XoV-aX-NRP" id="MPL-4M-eMw"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="yj_noSelected" width="23" height="23"/>
+    </resources>
+</document>
