@@ -11,6 +11,7 @@
 @interface YJImageScrollView ()<UIScrollViewDelegate>
 
 @end
+
 @implementation YJImageScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame image:(UIImage *)image{

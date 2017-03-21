@@ -26,6 +26,7 @@
 		8457BC381E68183D002A1843 /* YJPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8457BC2B1E68183D002A1843 /* YJPreviewViewController.xib */; };
 		8457BC391E68183D002A1843 /* YJReusableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */; };
 		8457BC3B1E68FEAD002A1843 /* YJImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */; };
+		8476E6FC1E7FCB2E002E9CAF /* NSObject+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 8476E6FB1E7FCB2E002E9CAF /* NSObject+Description.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		8457BC2C1E68183D002A1843 /* YJReusableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJReusableScrollView.h; sourceTree = "<group>"; };
 		8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJReusableScrollView.m; sourceTree = "<group>"; };
 		8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YJImageAssets.xcassets; sourceTree = "<group>"; };
+		8476E6FA1E7FCB2E002E9CAF /* NSObject+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Description.h"; sourceTree = "<group>"; };
+		8476E6FB1E7FCB2E002E9CAF /* NSObject+Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Description.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				8457BC2C1E68183D002A1843 /* YJReusableScrollView.h */,
 				8457BC2D1E68183D002A1843 /* YJReusableScrollView.m */,
 				8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */,
+				8476E6FA1E7FCB2E002E9CAF /* NSObject+Description.h */,
+				8476E6FB1E7FCB2E002E9CAF /* NSObject+Description.m */,
 			);
 			path = YJImagePickController;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				TargetAttributes = {
 					8457BBD91E68153A002A1843 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LKEC742D79;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -228,6 +234,7 @@
 				8457BBDF1E68153A002A1843 /* main.m in Sources */,
 				8457BC2F1E68183D002A1843 /* UIViewController+YJPhotoExtend.m in Sources */,
 				8457BC301E68183D002A1843 /* YJImagePickViewController.m in Sources */,
+				8476E6FC1E7FCB2E002E9CAF /* NSObject+Description.m in Sources */,
 				8457BC371E68183D002A1843 /* YJPreviewViewController.m in Sources */,
 				8457BC2E1E68183D002A1843 /* UIView+YJFrameExtend.m in Sources */,
 				8457BC391E68183D002A1843 /* YJReusableScrollView.m in Sources */,
@@ -352,11 +359,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				DEVELOPMENT_TEAM = LKEC742D79;
 				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuyueyes.YJImagePickDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyj.wxp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
 		};
@@ -364,11 +375,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				DEVELOPMENT_TEAM = LKEC742D79;
 				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuyueyes.YJImagePickDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyj.wxp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Release;
 		};
