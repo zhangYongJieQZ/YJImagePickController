@@ -23,7 +23,7 @@
         _leftLabel = [[UILabel alloc] init];
         _leftLabel.font = [UIFont systemFontOfSize:15];
         _leftLabel.textColor = [UIColor blackColor];
-        _leftLabel.frame = CGRectMake(_icon.right + 5, 0, 80, [UIScreen mainScreen].bounds.size.height /9.0);
+        _leftLabel.frame = CGRectMake(_icon.right + 5, 0, 90, [UIScreen mainScreen].bounds.size.height /9.0);
         [self addSubview:_leftLabel];
         
         _numberLabel = [[UILabel alloc] init];

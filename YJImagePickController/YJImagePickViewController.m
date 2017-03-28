@@ -5,8 +5,7 @@
 //  Created by admin on 2017/3/2.
 //
 //
-#define iOS8 ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
-#define mainQueue(block) dispatch_async(dispatch_get_main_queue(),block)
+
 
 #import "YJImagePickViewController.h"
 #import <Photos/Photos.h>
@@ -15,7 +14,7 @@
 #import "YJPhotoCollectionViewController.h"
 #import "YJPhotoShareManager.h"
 #import "UIViewController+YJPhotoExtend.h"
-@interface YJImagePickViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+@interface YJImagePickViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,selectdImageDelegate>
 {
     ALAssetsLibrary *assetsLibrary;
     PHFetchResult *fetchReult;
@@ -30,6 +29,11 @@
 @end
 
 @implementation YJImagePickViewController
+
+- (void)dealloc{
+    self.photoImageAry = nil;
+    self.photoListAry = nil;
+}
 
 - (instancetype)initWithMaxSelected:(NSInteger)maxSelected selectedImageBlock:(selectedBlock)block{
     if (self = [super init]) {
@@ -67,6 +71,7 @@
 }
 
 - (void)rightButtonClick{
+    [YJPhotoShareManager shareInstance].selectedCount = 0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -194,12 +199,14 @@
 }
 
 - (void)pushToPhotoListViewControllerWithTitle:(NSString *)title atIndex:(NSIndexPath *)path{
-    YJPhotoCollectionViewController *collectionVC = [[YJPhotoCollectionViewController alloc] initWithTitle:title imageArray:self.photoImageAry data:self.photoListAry[path.row] selectedBlock:^(NSArray<UIImage *> *selectedAry) {
-        if (self.myBlock) {
-            self.myBlock(selectedAry);
-        }
-    }];
+    YJPhotoCollectionViewController *collectionVC = [[YJPhotoCollectionViewController alloc] initWithTitle:title imageArray:self.photoImageAry data:self.photoListAry[path.row] delegate:self];
     [self.navigationController pushViewController:collectionVC animated:YES];
+}
+
+- (void)selectedImageArray:(NSArray<UIImage *> *)imageArray{
+    if (_myBlock) {
+        _myBlock(imageArray);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

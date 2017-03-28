@@ -11,6 +11,7 @@
 @interface YJImageScrollView ()<UIScrollViewDelegate>
 
 @end
+
 @implementation YJImageScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame image:(UIImage *)image{
@@ -34,6 +35,14 @@
     _imageV.frame = CGRectMake(5, ([UIScreen mainScreen].bounds.size.height - newSize.height)/2.0, newSize.width, newSize.height);
     _imageV.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2.0, [UIScreen mainScreen].bounds.size.height/2.0);
     _imageV.image = image;
+    self.contentSize = CGSizeMake(SCREENWIDTH, SCREENHEIGHT);
+}
+
+- (void)resetFrame{
+    CGSize newSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 10, _imageV.image.size.height *([UIScreen mainScreen].bounds.size.width - 10) /_imageV.image.size.width);
+    _imageV.frame = CGRectMake(5, ([UIScreen mainScreen].bounds.size.height - newSize.height)/2.0, newSize.width, newSize.height);
+    _imageV.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2.0, [UIScreen mainScreen].bounds.size.height/2.0);
+    self.contentSize = CGSizeMake(SCREENWIDTH, SCREENHEIGHT);
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

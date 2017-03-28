@@ -112,7 +112,7 @@ static NSString *cellID = @"CollectionCell";
     [_editBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_editBtn addTarget:self action:@selector(editAction) forControlEvents:UIControlEventTouchUpInside];
     [_footerBar addSubview:_editBtn];
-    _editBtn.hidden = YES;
+
     _previewBtn = [[UIButton alloc] initWithFrame:CGRectMake(_editBtn.right, 0, 40, _footerBar.height)];
     [_previewBtn addTarget:self action:@selector(previewAction) forControlEvents:UIControlEventTouchUpInside];
     _previewBtn.alpha = 0.5;
@@ -284,7 +284,29 @@ static NSString *cellID = @"CollectionCell";
 }
 
 - (void)editAction{
+    NSMutableArray *newImageAry = [[NSMutableArray alloc] init];
+    [YJPhotoShareManager shareInstance].currentSelectedArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [YJPhotoShareManager shareInstance].allSelectedArray.count; i ++) {
+        if ([[YJPhotoShareManager shareInstance].allSelectedArray[i] boolValue]) {
+            [newImageAry addObject:self.originalImageAry[i]];
+            [[YJPhotoShareManager shareInstance].currentSelectedArray addObject:@(i)];
+        }
+    }
     
+    YJPreviewViewController *previewVC = [[YJPreviewViewController alloc] initWithImageArray:newImageAry atIndex:0 isSelected:YES];
+    previewVC.chooseBlock = ^(NSInteger index,BOOL isSelected){
+        for (YJPhotoCollectionViewCell *cell in self.collectionView.visibleCells) {
+            if (cell.tag == index) {
+                [cell btnClick];
+            }
+        }
+    };
+    __weak __typeof(&*self)weakSelf = self;
+    previewVC.doneBlock = ^(void){
+        [weakSelf doneAction];
+    };
+    [self.navigationController pushViewController:previewVC animated:YES];
+
 }
 
 - (void)previewAction{

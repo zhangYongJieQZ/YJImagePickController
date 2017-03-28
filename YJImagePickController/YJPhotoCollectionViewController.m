@@ -16,18 +16,10 @@
 #import "UIViewController+YJPhotoExtend.h"
 static NSString *cellID = @"CollectionCell";
 
-//layer颜色用来调试视图
-#define redLayer(view) view.layer.borderWidth = 1.0;view.layer.borderColor = [UIColor redColor].CGColor;
-#define blueLayer(view) view.layer.borderWidth = 1.0;view.layer.borderColor = [UIColor blueColor].CGColor;
-#define blackLayer(view) view.layer.borderWidth = 1.0;view.layer.borderColor = [UIColor blackColor].CGColor;
-
-#define iOS8 ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
-#define backQueue(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-
 @interface YJPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)NSArray  *imageAry;
 @property (nonatomic, strong)UICollectionView  *collectionView;
-@property (nonatomic, copy)selectedBlock  myBlock;
+
 @property (nonatomic, strong)ALAssetsGroup  *assetsGroup;
 @property (nonatomic, strong)PHAssetCollection  *assetsCollection;
 @property (nonatomic, strong)NSMutableArray  *originalImageAry;
@@ -42,11 +34,13 @@ static NSString *cellID = @"CollectionCell";
 
 @implementation YJPhotoCollectionViewController
 
-- (instancetype)initWithTitle:(NSString *)title imageArray:(NSArray *)imageArray  data:(id)data selectedBlock:(selectedBlock)block{
+
+
+- (instancetype)initWithTitle:(NSString *)title imageArray:(NSArray *)imageArray  data:(id)data delegate:(id)delegate{
     if (self = [super init]) {
         self.title = title;
-        _myBlock = block;
         _imageAry = imageArray;
+        _delegate = delegate;
         if (iOS8) {
             _assetsCollection = data;
         }else{
@@ -74,10 +68,12 @@ static NSString *cellID = @"CollectionCell";
 }
 
 - (void)rightButtonClick{
+    [YJPhotoShareManager shareInstance].selectedCount = 0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)leftButtonClick{
+    [YJPhotoShareManager shareInstance].selectedCount = 0;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -116,7 +112,7 @@ static NSString *cellID = @"CollectionCell";
     [_editBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_editBtn addTarget:self action:@selector(editAction) forControlEvents:UIControlEventTouchUpInside];
     [_footerBar addSubview:_editBtn];
-    _editBtn.hidden = YES;
+
     _previewBtn = [[UIButton alloc] initWithFrame:CGRectMake(_editBtn.right, 0, 40, _footerBar.height)];
     [_previewBtn addTarget:self action:@selector(previewAction) forControlEvents:UIControlEventTouchUpInside];
     _previewBtn.alpha = 0.5;
@@ -161,13 +157,13 @@ static NSString *cellID = @"CollectionCell";
     cell.backImageV.image = self.imageAry[indexPath.row];
     cell.selected = [[YJPhotoShareManager shareInstance].allSelectedArray[indexPath.row] boolValue];
     cell.tag = indexPath.row;
+    __weak __typeof(&*self)weakSelf = self;
     cell.tapBlock = ^(void){
-        [self seeOriginImageInIndex:indexPath.row];
+        [weakSelf seeOriginImageInIndex:indexPath.row];
     };
     cell.btnBlock = ^(BOOL hasSelected){
-        [self replacSelectedAryAtIndex:indexPath.row withBoolValue:hasSelected];
+        [weakSelf replacSelectedAryAtIndex:indexPath.row withBoolValue:hasSelected];
     };
-    
     if (_hasBeyond) {
         if(cell.selected){
             cell.alpha = 1;
@@ -191,12 +187,12 @@ static NSString *cellID = @"CollectionCell";
         for (YJPhotoCollectionViewCell *cell in self.collectionView.visibleCells) {
             if (cell.tag == index) {
                 [cell btnClick];
-                
             }
         }
     };
+    __weak __typeof(&*self)weakSelf = self;
     previewVC.doneBlock = ^(void){
-        [self doneAction];
+        [weakSelf doneAction];
     };
     [self.navigationController pushViewController:previewVC animated:YES];
 }
@@ -263,7 +259,7 @@ static NSString *cellID = @"CollectionCell";
             //获取缩略图
             [[PHImageManager defaultManager]requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
                 [weakSelf.originalImageAry addObject:imageData];
-                [self saveImage];
+                [weakSelf saveImage];
             }];
         }
         
@@ -275,7 +271,7 @@ static NSString *cellID = @"CollectionCell";
                 NSUInteger buffered = [representation getBytes:buffer fromOffset:0.0 length:((unsigned long)representation.size) error:nil];
                 NSData *data = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
                 [weakSelf.originalImageAry addObject:data];
-                [self saveImage];
+                [weakSelf saveImage];
             }
         }];
     }
@@ -288,10 +284,6 @@ static NSString *cellID = @"CollectionCell";
 }
 
 - (void)editAction{
-    
-}
-
-- (void)previewAction{
     NSMutableArray *newImageAry = [[NSMutableArray alloc] init];
     [YJPhotoShareManager shareInstance].currentSelectedArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < [YJPhotoShareManager shareInstance].allSelectedArray.count; i ++) {
@@ -309,11 +301,36 @@ static NSString *cellID = @"CollectionCell";
             }
         }
     };
+    __weak __typeof(&*self)weakSelf = self;
     previewVC.doneBlock = ^(void){
-        [self doneAction];
+        [weakSelf doneAction];
     };
     [self.navigationController pushViewController:previewVC animated:YES];
-    
+
+}
+
+- (void)previewAction{
+    NSMutableArray *newImageAry = [[NSMutableArray alloc] init];
+    [YJPhotoShareManager shareInstance].currentSelectedArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [YJPhotoShareManager shareInstance].allSelectedArray.count; i ++) {
+        if ([[YJPhotoShareManager shareInstance].allSelectedArray[i] boolValue]) {
+            [newImageAry addObject:self.originalImageAry[i]];
+            [[YJPhotoShareManager shareInstance].currentSelectedArray addObject:@(i)];
+        }
+    }
+    YJPreviewViewController *previewVC = [[YJPreviewViewController alloc] initWithImageArray:newImageAry atIndex:0 isSelected:YES];
+    previewVC.chooseBlock = ^(NSInteger index,BOOL isSelected){
+        for (YJPhotoCollectionViewCell *cell in self.collectionView.visibleCells) {
+            if (cell.tag == index) {
+                [cell btnClick];
+            }
+        }
+    };
+    __weak __typeof(&*self)weakSelf = self;
+    previewVC.doneBlock = ^(void){
+        [weakSelf doneAction];
+    };
+    [self.navigationController pushViewController:previewVC animated:YES];
 }
 
 - (void)doneAction{
@@ -323,9 +340,10 @@ static NSString *cellID = @"CollectionCell";
             [imageArray addObject:[UIImage imageWithData:_originalImageAry[i]]];
         }
     }
-    if (_myBlock) {
-        _myBlock(imageArray);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(selectedImageArray:)]) {
+        [self.delegate selectedImageArray:imageArray];
     }
+    [YJPhotoShareManager shareInstance].selectedCount = 0;
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -333,6 +351,5 @@ static NSString *cellID = @"CollectionCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

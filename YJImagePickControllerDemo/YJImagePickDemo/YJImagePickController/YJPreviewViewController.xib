@@ -27,7 +27,76 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-NP-OKt">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3H8-ZM-hW1">
+                            <rect key="frame" x="0.0" y="465" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-ta-5fF">
+                                    <rect key="frame" x="14" y="6" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vog-4q-rpR">
+                                    <rect key="frame" x="103" y="10" width="21" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="edt_imageMosaic"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z54-LC-u3z">
+                                    <rect key="frame" x="177" y="10" width="21" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="edit_text"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGf-4U-6Hc">
+                                    <rect key="frame" x="256" y="10" width="21" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="edit_emotionBtn"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6Q-HQ-amW">
+                                    <rect key="frame" x="329" y="6" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="edit_pen"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSz-n7-aD2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5f-6L-RzD">
+                            <rect key="frame" x="310" y="8" width="50" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="IYk-Ca-Fcl"/>
+                                <constraint firstAttribute="height" constant="47" id="QCX-KA-zyj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="完成">
+                                <color key="titleColor" red="0.0" green="1" blue="0.456787109375" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-mv-mgD">
+                            <rect key="frame" x="15" y="8" width="50" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="XK9-7X-1xu"/>
+                                <constraint firstAttribute="height" constant="47" id="rJV-RE-OAP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="i5f-6L-RzD" firstAttribute="top" secondItem="qSz-n7-aD2" secondAttribute="top" constant="8" id="2EI-n2-bWB"/>
+                        <constraint firstAttribute="trailing" secondItem="i5f-6L-RzD" secondAttribute="trailing" constant="15" id="QVp-LH-jQb"/>
+                        <constraint firstItem="GJr-mv-mgD" firstAttribute="leading" secondItem="qSz-n7-aD2" secondAttribute="leading" constant="15" id="W9I-Wz-cwn"/>
+                        <constraint firstItem="GJr-mv-mgD" firstAttribute="top" secondItem="qSz-n7-aD2" secondAttribute="top" constant="8" id="uyK-SG-my8"/>
+                        <constraint firstAttribute="height" constant="64" id="yj1-Rb-udQ"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-1U-I2Y">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
@@ -117,10 +186,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="qSz-n7-aD2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9NW-uq-RtW"/>
                 <constraint firstAttribute="trailing" secondItem="O6U-Kb-XoP" secondAttribute="trailing" id="IRG-Tz-I7S"/>
                 <constraint firstAttribute="trailing" secondItem="Vn4-NP-OKt" secondAttribute="trailing" id="JDr-0n-ZS7"/>
                 <constraint firstItem="HIf-1U-I2Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KS8-sa-Unf"/>
                 <constraint firstItem="HIf-1U-I2Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PJA-vw-cWt"/>
+                <constraint firstItem="qSz-n7-aD2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VHq-oj-PSg"/>
+                <constraint firstAttribute="trailing" secondItem="qSz-n7-aD2" secondAttribute="trailing" id="ZIT-xZ-EAV"/>
                 <constraint firstItem="Vn4-NP-OKt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nHm-4Y-Ez9"/>
                 <constraint firstAttribute="bottom" secondItem="Vn4-NP-OKt" secondAttribute="bottom" id="pkp-9c-pLA"/>
                 <constraint firstAttribute="bottom" secondItem="O6U-Kb-XoP" secondAttribute="bottom" id="wTL-mL-6m1"/>
@@ -132,6 +204,10 @@
         </view>
     </objects>
     <resources>
+        <image name="edit_emotionBtn" width="21" height="21"/>
+        <image name="edit_pen" width="21" height="21"/>
+        <image name="edit_text" width="21" height="21"/>
+        <image name="edt_imageMosaic" width="21" height="21"/>
         <image name="yj_leftArrow" width="11" height="20"/>
         <image name="yj_noSelected" width="23" height="23"/>
     </resources>

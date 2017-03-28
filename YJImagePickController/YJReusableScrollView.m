@@ -5,9 +5,6 @@
 //  Created by admin on 2017/3/2.
 //
 //
-#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
-#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
-#define iOS8 ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
 
 #import "YJReusableScrollView.h"
 #import "YJImageScrollView.h"
@@ -79,9 +76,7 @@
         _rightV = [[YJImageScrollView alloc] initWithFrame:CGRectMake(SCREENWIDTH * 2, 0, SCREENWIDTH, SCREENHEIGHT) image:[UIImage imageWithData:[self returnPathString:_imageAry[midIndex +1]]]];
         [self addSubview:_rightV];
         [self setContentOffset:CGPointMake(SCREENWIDTH * _currentPage, 0)];
-        
     }
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
     [self addGestureRecognizer:tap];
 }
@@ -116,13 +111,21 @@
             }
         }else if (_currentPage == 0 && _index == 1){
             _index -= 1;
+            [self resetImagesFrame];
+        }else{
+            [self resetImagesFrame];
         }
-        
         __weak __typeof(&*self)weakSelf = self;
         if (_pageBlock) {
             _pageBlock(weakSelf.index);
         }
     }
+}
+
+- (void)resetImagesFrame{
+    [_midV resetFrame];
+    [_leftV resetFrame];
+    [_rightV resetFrame];
 }
 
 - (void)reusableSelf{
