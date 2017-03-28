@@ -16,9 +16,6 @@
 #import "UIViewController+YJPhotoExtend.h"
 static NSString *cellID = @"CollectionCell";
 
-#define iOS8 ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
-#define backQueue(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-
 @interface YJPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)NSArray  *imageAry;
 @property (nonatomic, strong)UICollectionView  *collectionView;
@@ -37,9 +34,7 @@ static NSString *cellID = @"CollectionCell";
 
 @implementation YJPhotoCollectionViewController
 
-- (void)dealloc{
-    NSLog(@"%@ dealloc",self);
-}
+
 
 - (instancetype)initWithTitle:(NSString *)title imageArray:(NSArray *)imageArray  data:(id)data delegate:(id)delegate{
     if (self = [super init]) {
@@ -301,7 +296,6 @@ static NSString *cellID = @"CollectionCell";
             [[YJPhotoShareManager shareInstance].currentSelectedArray addObject:@(i)];
         }
     }
-    
     YJPreviewViewController *previewVC = [[YJPreviewViewController alloc] initWithImageArray:newImageAry atIndex:0 isSelected:YES];
     previewVC.chooseBlock = ^(NSInteger index,BOOL isSelected){
         for (YJPhotoCollectionViewCell *cell in self.collectionView.visibleCells) {
@@ -315,7 +309,6 @@ static NSString *cellID = @"CollectionCell";
         [weakSelf doneAction];
     };
     [self.navigationController pushViewController:previewVC animated:YES];
-    
 }
 
 - (void)doneAction{
@@ -336,6 +329,5 @@ static NSString *cellID = @"CollectionCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

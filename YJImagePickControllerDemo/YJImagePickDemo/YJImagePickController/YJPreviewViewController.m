@@ -29,10 +29,6 @@
 
 @implementation YJPreviewViewController
 
-- (void)dealloc{
-    NSLog(@"%@ dealloc",self);
-}
-
 - (instancetype)initWithImageArray:(NSArray *)imageArray atIndex:(NSInteger)index isSelected:(BOOL)isSelected{
     if (self = [super init]) {
         _imageArray = imageArray;

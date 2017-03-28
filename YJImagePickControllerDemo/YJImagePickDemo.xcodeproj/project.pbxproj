@@ -65,6 +65,8 @@
 		8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YJImageAssets.xcassets; sourceTree = "<group>"; };
 		8476E6FA1E7FCB2E002E9CAF /* NSObject+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Description.h"; sourceTree = "<group>"; };
 		8476E6FB1E7FCB2E002E9CAF /* NSObject+Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Description.m"; sourceTree = "<group>"; };
+		C1FB750E1E8A0DFB001C29E5 /* YJImagePickHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJImagePickHeader.h; sourceTree = "<group>"; };
+		C1FB750F1E8A0E55001C29E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8457BBE11E68153A002A1843 /* AppDelegate.m */,
 				8457BBE31E68153A002A1843 /* ViewController.h */,
 				8457BBE41E68153A002A1843 /* ViewController.m */,
+				C1FB750F1E8A0E55001C29E5 /* PrefixHeader.pch */,
 				8457BBE61E68153A002A1843 /* Main.storyboard */,
 				8457BBE91E68153A002A1843 /* Assets.xcassets */,
 				8457BBEB1E68153A002A1843 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				8457BC3A1E68FEAD002A1843 /* YJImageAssets.xcassets */,
 				8476E6FA1E7FCB2E002E9CAF /* NSObject+Description.h */,
 				8476E6FB1E7FCB2E002E9CAF /* NSObject+Description.m */,
+				C1FB750E1E8A0DFB001C29E5 /* YJImagePickHeader.h */,
 			);
 			path = YJImagePickController;
 			sourceTree = "<group>";
@@ -362,6 +366,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = LKEC742D79;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJImagePickDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,6 +383,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				DEVELOPMENT_TEAM = LKEC742D79;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJImagePickDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = YJImagePickDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

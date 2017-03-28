@@ -5,8 +5,7 @@
 //  Created by admin on 2017/3/2.
 //
 //
-#define iOS8 ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
-#define mainQueue(block) dispatch_async(dispatch_get_main_queue(),block)
+
 
 #import "YJImagePickViewController.h"
 #import <Photos/Photos.h>
@@ -34,7 +33,6 @@
 - (void)dealloc{
     self.photoImageAry = nil;
     self.photoListAry = nil;
-    NSLog(@"%@ dealloc",self);
 }
 
 - (instancetype)initWithMaxSelected:(NSInteger)maxSelected selectedImageBlock:(selectedBlock)block{
